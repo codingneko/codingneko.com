@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>SCUBA air time calculator</title>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <strong>Maximum time under water calculator</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-4">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="number" id="sac" value="21" />
+                            <label for="sac">
+                                Surface Air Consumed (litres of air at 1 bar)
+                            </label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input type="number" id="time" />
+                            <label for="time">
+                                Desired time underwater (minutes)
+                            </label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <input type="number" id="volume" />
+                            <label for="volume">
+                                Cylinder volume (litres)
+                            </label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <input type="number" id="pressure" />
+                            <label for="pressure">
+                                Cylinder pressure (bar)
+                            </label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="number" id="depth" />
+                            <label for="depth"> Average depth </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer class="page-footer light-blue darken-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <p class="grey-text text-lighten-4">
+                            DO NOT ACTUALLY USE THIS FOR DIVING. IT'S A FUN
+                            PROJECT MADE BY A STUPID BEGINER DIVER AND IT IS
+                            PROBABLY UNSAFE.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="row no-margin">
+                        <div class="col s12">
+                            Made with ❤️ by
+                            <a href="https://codingneko.com">CodingNeko</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
