@@ -11,7 +11,7 @@ var depth = document.getElementById('depth');
 });
 
 function calculateTime() {
-    let outsidePressure = depth.value / 10;
+    let outsidePressure = depth.value / 10 + 1;
     if (
         sac.value != 0 &&
         time.value != 0 &&
