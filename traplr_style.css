@@ -1,0 +1,43 @@
+@media only screen and (min-width: 500px){
+    .sun_side_widget {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .list-group-item {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    
+    .header-brand {
+        margin-top: 5px;
+    }
+    
+    .user-avatar, .sidebar-user-data {
+        transition: ease-in-out 0.5s;
+    }
+    
+    .user-avatar:hover, .sidebar-user-data:hover{
+        transform: scale(1.3);
+    }
+    
+    .sun_profile_container {
+        margin-top: 40px;
+    }
+    
+    #photos-list .photo-data{
+        transition: ease-in-out 0.5s;
+    }
+    
+    #photos-list {
+        overflow: visible;
+    }
+    
+    #photos-list .photo-data:not(:first-of-type):hover{
+        z-index: 200;
+        transform: scale(2);
+    }
+    
+    .footer-wrapper {
+        display: none;
+    }
+    
+}

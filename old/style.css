@@ -1,0 +1,164 @@
+@font-face {
+font-family: "future";
+src: url("fonts/future.eot");
+src:
+url("fonts/future.woff") format("woff"),
+url("fonts/future.svg") format("svg");
+}
+
+@keyframes titleAnimation {
+  0%{
+    width: 0%;
+    margin-top:18%;
+  }
+  5%{
+    width: 90%;
+    margin-top:18%;
+  }
+  90%{
+    width: 90%;
+    margin-top:18%;
+  }
+  100%{
+    width: 300px;
+    margin-top:0%;
+  }
+}
+
+@keyframes linksAnimation {
+  0%{
+    margin-top: 0%;
+    opacity: 0;
+  }
+  5%{
+    margin-top: 0%;
+  }
+  90%{
+    margin-top: 0%;
+  }
+  93%{
+    opacity: 0;
+  }
+  100%{
+    margin-top: 18%;
+    opacity: 1;
+  }
+}
+
+
+
+body{
+  margin:0;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #FFF;
+  width: 100%;
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+  background-color: #222;
+  color:#FFF;
+  padding:2px;
+  transition: 1s;
+}
+
+a:hover{
+  background-color: #FFF;
+  color:#222;
+}
+
+ul{
+  list-style-image: url("http://www.phpdeveloper.org/img/layout/gray_arrows.gif");
+}
+
+li{
+  margin-top:4px;
+}
+
+.background-1{
+  background-image: url(backgrounds/blade_runner_girl.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 4%;
+}
+
+.background-2{
+  background-image: url(backgrounds/cyberpunk_city2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 60%;
+  padding-top:20px;
+}
+
+.typed-div{
+  font-family: Arial;
+  text-align: center;
+  padding: 30px;
+  font-size: 200%;
+  overflow: visible;
+  width: 80%;
+  height: 20px;
+}
+
+.typed-holder{
+  width: 300px;
+  animation: titleAnimation;
+  animation-duration: 23s;
+  border-bottom: 3px solid #FFF;
+  display: inline-block;
+  float: center;
+}
+
+.links{
+    opacity: 1;
+    margin-top:18%;
+    margin-bottom:14%;
+    animation: linksAnimation;
+    animation-duration: 23s;
+}
+
+.com-link{
+  background-color: #FFF;
+  color: #000;
+}
+
+.links a{
+  color:#FFF;
+  text-decoration:none;
+  background: none;
+}
+
+.down{
+  margin-top:2%;
+}
+
+.section{
+  margin-top:0%;
+  background-color: #FFF;
+  color: #000;
+  padding-bottom:50px;
+}
+
+div.title{
+  background-color: #EEE;
+  margin:0;
+  padding:15px;
+}
+
+div.title span{
+  font-size: 30px;
+}
+
+p{
+  margin-top:30px;
+}
+
+.content{
+  margin:3%;
+}

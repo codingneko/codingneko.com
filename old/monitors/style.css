@@ -1,0 +1,15 @@
+body{
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: #000;
+  color:#FFF;
+}
+
+div.light, .temperature, .laser{
+  margin-top:20px;
+}
+
+.btn{
+color:#000 !important;
+}
