@@ -1,129 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" integrity="sha512-tYKqO78H3mRRCHa75fms1gBvGlANz0JxjN6fVrMBvWL+vOOy200npwJ69OBl9XEsTu3yVUvZNrdWFIIrIf8FLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/global.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js" integrity="sha512-2sI5N95oT62ughlApCe/8zL9bQAXKsPPtZZI2KE3dznuZ8HpE2gTMHYzyVN7OoSPJCM1k9ZkhcCo3FvOirIr2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>CodingNeko</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="styles/mobile.css" />
-    <link rel="stylesheet" type="text/css" href="icomoon/style.css"/>
-  </head>
-  <body>
-      <div class="main">
-        <nav>
-          <span><a href="#about" id="toAbout">About Me!</a></span>
-          <span><a href="#projects" id="toProjects">Projects</a></span>
-        </nav>
-        <div class="bg bg1">
-          <div class="header">
-            <div class="header-text">CODY</div>
-            <img src="img/cody.png" class="header-image" />
-          </div>
+</head>
+<body class="bg-purple txt-brown">
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide lg-font">0</li>
+                <li class="glide__slide lg-font">1</li>
+                <li class="glide__slide lg-font">2</li>
+            </ul>
         </div>
-        <div class="content">
-          <section>
-            <div class="inner-section">
-              <div class="text-left" id="about">
-                <h2> About Me! </h2>
-                <p>
-                  Hey! My name is Cody, I'm a web and server side application developer,
-                  I was born in 1998 in Vigo, Galicia, Spain, but I moved to Barcelona in the year 2000.
-                </p>
-                <p>
-                  Things were boring for a while, went through pre-school, middle school and highschool, and
-                  now I'm studying a superior degree in Web development and server side applications, which
-                  is amazing if it werent because we're forced to study unrelated stuff all of the time...
-                </p>
-                <p>
-                  During pre-school my favourite subject was art, but then that changed to history at the beggining of
-                  middle school, and after that I really liked Science, I was never interested in English until
-                  highschool, I had an awesome teacher that gave me the motivation I needed to
-                  learn English, which completely changed my life, I now have friends from all over the world, I tweet in English,
-                  I have all my electronics in English and I even type in English, I use EN (UK) keyboard, which is usually
-                  annoying to teachers and class mates because they're used to using ES (ES), which is quite different hehe.
-                </p>
-              </div>
-              <div class="growing-up" id="tilt">
-                <div class="parallax-tilt">
-                  Growing up. <span id="age">20</span>%<br /><br />
-                  <div class="progress-bg"><span class="progress-completed" style="width:20%;"></span></div><br />
-                  Please wait...
-                </div>
-              </div>
-            </div>
-          </section>
-          <div class="bg bg2">
-          </div>
-          <section id="projects">
-              <div class="image-left">
-
-              </div>
-              <div class="text-right">
-                <div class="projects">
-                  <h2>Active projects</h2>
-                  <div class="obscure">
-                    <h3>Obscure</h3>
-                    <p>
-                      Obscure is an intelectual puzzle game, the objective is to beat all the levels, the only final reward is to beat
-                      the game, when someone does that, the entire game will remove itself, only one person can
-                      complete all 20 levels and to do so they will need to be very skilled in many different fields.
-                    </p>
-                    <a href="obscure">Try to beat the game</a>
-                  </div>
-                  <div class="Nerve">
-                    <h3>Nerve</h3>
-                    <p>
-                      Nerve is an anonymous chat made in PHP, with a json database, it's sort of like 4chan but built
-                      to be a chat-like environment with images instead of an imageboard, could also be used as just
-                      a chat engine thanks to it's open json database.
-                    </p>
-                    <a href="https://github.com/codingneko/nerve">View on GitHub</a>
-                  </div>
-                </div>
-              </div>
-          </section>
-          <div class="bg bg3">
-          </div>
-        </div>
-        <footer>
-          <div class="inner-section">
-            <div class="contact">
-              <h3>I'm on Social Media!</h3>
-              <a href="https://twitter.com/codingneko" class="icon-twitter"></a>
-              <a href="https://steamcommunity.com/id/codingneko" class="icon-steam"></a>
-              <a href="https://github.com/codingneko" class="icon-github"></a>
-              <a href="ts3server://codingneko.com/" class="icon-teamspeak"></a>
-              <span class="icon-discord-small" id="icon-discord"></span>
-              <a href="https://cybre.space/@codingneko"><img src="mastodon.png" width="26px"/></a>
-              <a href="https://open.spotify.com/user/x9rauv9fkdc3zb88jd1zed3uo?si=uzeLiYNHSDCUtfoksAMLLQ"><img src="spoty.png" width="26px"/></a>
-            </div>
-            <div class="signature">
-              Made with love, in pure HTML5, CSS3 and jQuery by Coding Neko, Aka Cody. <br /> <br />
-              Icons by <a href="https://icomoon.io/app/" style="color:#EEE">icomoon</a>.
-            </div>
-            <div class="pgp">
-              For secure private communications please encrypt your messages with <a href="pubkey.asc" style="color:#EEE">my public PGP key</a> and don't forget to 
-              send me yours so I can encrypt my message when I reply to you.
-            </div>
-          </div>
-        </footer>
-        <div id="discord">
-          <div class="inner-discord">
-            <span class="icon-discord-big" style="font-size: 50px;"></span>
-            <p>
-              My discord tag is
-              <p>
-                <span id="discord-tag">codingneko#0001</span>
-              </p>
-              go add me!
-            </p>
-            <div id="discord-close">
-              Close
-            </div>
-          </div>
-        </div>
-      </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.js"></script>
-      <script src="scripts/main.js"></script>
-  </body>
+    </div>
+    <script>
+        new Glide('.glide', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 1
+        })
+    </script>
+</body>
 </html>

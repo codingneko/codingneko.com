@@ -1,0 +1,14 @@
+@import "./colours.css";
+@import "./layouts.css";
+@import "./fonts.css";
+@import "./components.css";
+
+body, html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Little One', 'Courier New', Courier, monospace;
+    background-image: url("../resources/bg.jpg");
+}

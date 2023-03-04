@@ -1,0 +1,98 @@
+:root {
+    --sky-blue: #bde0fe;
+    --blue: #a2d2ff;
+    --red: #ffafcc;
+    --pink: #fe83cc;
+    --salmon: #ffc8dd;
+    --purple: #cdb4db;
+    --turquoise: #daeaf6;
+    --emerald: #7ec4cf;
+    --dark-blue: #9cadce;
+    --gray: #d1cfe2;
+    --brown: #d4afb0;
+    --yellow: #fdfd96;
+}
+
+.txt-sky-blue {
+    color: var(--sky-blue);
+}
+
+.bg-sky-blue {
+    background-color: var(--sky-blue);
+}
+
+.txt-blue {
+    color: var(--blue);
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.txt-red {
+    color: var(--red);
+}
+
+.bg-red {
+    background-color: var(--red);
+}
+
+.bg-pink {
+    background-color: var(--pink);
+}
+
+.txt-salmon {
+    color: var(--salmon);
+}
+
+.bg-salmon {
+    background-color: var(--salmon);
+}
+
+.txt-purple {
+    color: var(--purple);
+}
+
+.bg-purple {
+    background-color: var(--purple);
+}
+
+.txt-turquoise {
+    color: var(--turquoise);
+}
+
+.bg-turquoise {
+    background-color: var(--turquoise);
+}
+
+.txt-emerald {
+    color: var(--emerald);
+}
+
+.bg-emerald {
+    background-color: var(--emerald);
+}
+
+.txt-dark-blue {
+    color: var(--dark-blue);
+}
+
+.bg-dark-blue {
+    background-color: var(--dark-blue);
+}
+
+.txt-gray {
+    color: var(--gray);
+}
+
+.bg-gray {
+    background-color: var(--gray);
+}
+
+.txt-brown {
+    color: var(--brown);
+}
+
+.bg-brown {
+    background-color: var(--brown);
+}
