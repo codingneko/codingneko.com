@@ -11,6 +11,8 @@
     --gray: #d1cfe2;
     --brown: #d4afb0;
     --yellow: #fdfd96;
+    --white: #ffffff;
+    --cookie: #eee0b1;
 }
 
 .txt-sky-blue {
@@ -95,4 +97,20 @@
 
 .bg-brown {
     background-color: var(--brown);
+}
+
+.txt-white {
+    color: var(--white);
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.txt-cookie {
+    color: var(--cookie);
+}
+
+.bg-cookie {
+    background-color: var(--cookie);
 }

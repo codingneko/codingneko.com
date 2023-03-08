@@ -8,15 +8,23 @@
     src: url(../resources/LittleOne.ttf);
 }
 
-.lg-font {
+.little-one {
+    font-family: 'Little One', 'Courier New', Courier, monospace;
+}
+
+.little {
+    font-family: 'Little', 'Courier New', Courier, monospace;
+}
+
+.font-lg {
     font-size: 4rem;
 }
 
-.md-font {
+.font-md {
     font-size: 2rem;
 }
 
-.sm-font {
+.font-sm {
     font-size: 0.7rem;
 }
 
@@ -26,4 +34,8 @@
 
 .light {
     font-weight: 100;
+}
+
+.normal {
+    font-weight: 400;
 }

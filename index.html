@@ -5,28 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" integrity="sha512-tYKqO78H3mRRCHa75fms1gBvGlANz0JxjN6fVrMBvWL+vOOy200npwJ69OBl9XEsTu3yVUvZNrdWFIIrIf8FLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/global.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js" integrity="sha512-2sI5N95oT62ughlApCe/8zL9bQAXKsPPtZZI2KE3dznuZ8HpE2gTMHYzyVN7OoSPJCM1k9ZkhcCo3FvOirIr2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>CodingNeko</title>
 </head>
-<body class="bg-purple txt-brown">
-    <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-                <li class="glide__slide lg-font">0</li>
-                <li class="glide__slide lg-font">1</li>
-                <li class="glide__slide lg-font">2</li>
-            </ul>
-        </div>
+<body class="txt-brown">
+    <nav class="nav spaced">
+        <ul class="left-nav">
+            <li>
+            </li>
+        </ul>
+
+        <ul class="right-nav">
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#services">Services</a>
+            </li>
+            <li>
+                <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+                <a href="#footer">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="bg-sky-blue txt-white section little-one">
+        <h1 class="title text-center pt-3 font-lg normal">
+            CodingNeko
+        </h1>
     </div>
-    <script>
-        new Glide('.glide', {
-            type: 'carousel',
-            startAt: 0,
-            perView: 1
-        })
-    </script>
+
+    <div id="projects" class="bg-brown txt-green section">
+
+    </div>
+
+    <div id="services" class="bg-gray section">
+
+    </div>
+
+    <div id="gallery" class="bg-red txt-gray section">
+        <div id="misskey-gallery">
+
+        </div>
+        <script src="gallery.js"></script>
+    </div>
+
+    <div id="footer" class="bg-red txt-gray footer">
+
+    </div>
 </body>
 </html>
