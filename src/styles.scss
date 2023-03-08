@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./styles/colours.scss";
+@import "./styles/fonts.scss";
+@import "./styles/layouts.scss";
+
+body,
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Little", "Courier New", Courier, monospace;
+    background-color: var(--sky-blue);
+    background-size: 25%;
+}

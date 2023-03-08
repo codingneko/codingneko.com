@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Little";
+    src: url(../assets/fonts/Little.ttf);
+}
+
+@font-face {
+    font-family: "Little One";
+    src: url(../assets/fonts/LittleOne.ttf);
+}
+
+.little-one {
+    font-family: "Little One", "Courier New", Courier, monospace;
+}
+
+.little {
+    font-family: "Little", "Courier New", Courier, monospace;
+}
+
+.font-lg {
+    font-size: 4rem;
+}
+
+.font-md {
+    font-size: 2rem;
+}
+
+.font-sm {
+    font-size: 0.7rem;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.light {
+    font-weight: 100;
+}
+
+.normal {
+    font-weight: 400;
+}

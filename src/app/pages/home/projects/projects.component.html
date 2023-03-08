@@ -1,0 +1,19 @@
+<div id="projects" class="bg-brown txt-green section">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="project-container row">
+            <a
+                class="project cell lg-1"
+                *ngFor="let project of projects"
+                href="{{ project.url }}"
+            >
+                <div class="name">
+                    {{ project.name }}
+                </div>
+                <div class="description">
+                    {{ project.description }}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.project-container {
+    gap: 1rem;
+
+    .project {
+        background-color: white;
+        border-radius: 5px;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: var(--dar-gray);
+
+        .name {
+            font-family: "Little One";
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    ul {
+        list-style: none;
+        justify-content: flex-start;
+        display: flex;
+        padding-inline-start: 40px;
+        padding-inline-end: 40px;
+        font-family: "Little One", "Courier New", Courier, monospace;
+    }
+}
+
+.nav .left-nav {
+    justify-content: flex-start;
+}
+
+.nav .right-nav {
+    justify-content: flex-end;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 0rem 1rem;
+}
