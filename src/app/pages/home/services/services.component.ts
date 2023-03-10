@@ -31,6 +31,20 @@ export class ServicesComponent implements OnInit {
                 image: 'assets/service-images/ts3.png',
                 url: this.sanitize('ts3server://codingneko.com'),
             },
+            {
+                name: 'Mumble server',
+                description: `A mumble server I host for me and my friends to talk over a FOSS platform, we barely use it to be honest.`,
+                running: true,
+                image: 'assets/service-images/mumble.png',
+                url: this.sanitize('ts3server://codingneko.com'),
+            },
+            {
+                name: 'Matrix server',
+                description: `A Matrix IM server I host, just like with Misskey, this is meant to be a one user instance, so signing up is disallowed.`,
+                running: true,
+                image: 'assets/service-images/matrix.jpg',
+                url: this.sanitize('ts3server://codingneko.com'),
+            },
         ];
     }
 

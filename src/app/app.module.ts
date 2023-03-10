@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/home/projects/projects.component';
 import { ServicesComponent } from './pages/home/services/services.component';
 import { GalleryComponent } from './pages/home/gallery/gallery.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
     declarations: [
@@ -18,6 +19,7 @@ import { GalleryComponent } from './pages/home/gallery/gallery.component';
         ProjectsComponent,
         ServicesComponent,
         GalleryComponent,
+        FooterComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule],
     providers: [],
