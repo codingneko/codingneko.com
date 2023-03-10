@@ -14,14 +14,18 @@ import {
 export class GalleryService {
     constructor(private http: HttpClient) {}
 
-    getImages(): Observable<MisskeyFile[]> {
+    getImages(galleryId: string): Observable<MisskeyFile[] | undefined> {
         return this.http
-            .post<MisskeyGallery>(
+            .post<MisskeyGallery[]>(
                 'https://misskey.codingneko.com/api/gallery/posts',
                 {
                     i: environment.misskeyAuthToken,
                 }
             )
-            .pipe(map((mg) => mg.files));
+            .pipe(
+                map(
+                    (mg) => mg.find((gallery) => gallery.id == galleryId)?.files
+                )
+            );
     }
 }
