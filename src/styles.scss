@@ -2,6 +2,7 @@
 @import "./styles/colours.scss";
 @import "./styles/fonts.scss";
 @import "./styles/layouts.scss";
+@import "./styles/card.scss";
 
 body,
 html {
@@ -10,7 +11,26 @@ html {
 }
 
 body {
-    font-family: "Little", "Courier New", Courier, monospace;
+    font-family: "Styles", "Courier New", Courier, monospace;
+    font-size: 1.2rem;
     background-color: var(--sky-blue);
     background-size: 25%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-gray);
+}
+
+h2 {
+    font-family: "Budal Dolan";
+    font-weight: 200;
+    font-size: 4rem;
+    margin: 0rem;
+}
+
+.section {
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    min-height: 20rem;
 }

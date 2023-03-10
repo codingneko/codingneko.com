@@ -1,5 +1,28 @@
 <div id="services" class="bg-gray section">
     <div class="container">
         <h2>Services</h2>
+
+        <div class="service-container gap-1 row">
+            <a
+                [href]="service.url"
+                class="service cell lg-1 md-2 sm-4"
+                *ngFor="let service of services"
+            >
+                <div class="card full-size">
+                    <img
+                        *ngIf="service.image != undefined"
+                        src="{{ service.image }}"
+                    />
+                    <div class="card-header">
+                        {{ service.name }}
+                    </div>
+                    <div class="card-content">
+                        <div class="description">
+                            {{ service.description }}
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
 </div>

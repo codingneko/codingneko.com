@@ -1,15 +1,13 @@
-.project-container {
-    gap: 1rem;
+.project {
+    align-self: stretch;
 
-    .project {
-        background-color: white;
-        border-radius: 5px;
-        padding: 1rem 2rem;
-        text-decoration: none;
-        color: var(--dar-gray);
-
-        .name {
-            font-family: "Little One";
-        }
+    .website {
+        padding: 0.5rem;
+        background-color: var(--sky-blue);
+        border-radius: 0.5rem;
+        display: block;
+        width: fit-content;
+        margin: auto;
+        margin-top: 1rem;
     }
 }

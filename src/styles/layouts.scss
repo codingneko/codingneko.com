@@ -21,47 +21,36 @@ $screen-sm: 20px;
             justify-content: flex-end;
         }
 
+        &.gap-1 {
+            gap: 1rem;
+        }
+
         .cell {
             @media only screen and (min-width: $screen-sm) {
                 @for $i from 1 through 4 {
                     &.sm-#{$i} {
-                        width: 100%;
+                        width: calc(#{(25 * $i) + "%"} - 0.75rem);
                     }
                 }
             }
 
             @media only screen and (min-width: $screen-md) {
-                &.md-1 {
-                    width: 50%;
-                }
-
-                &.md-2 {
-                    width: 50%;
-                }
-
-                &.md-3 {
-                    width: 75%;
-                }
-
-                &.md-4 {
-                    width: 100%;
+                @for $i from 1 through 4 {
+                    &.md-#{$i} {
+                        width: calc(#{(25 * $i) + "%"} - 0.75rem);
+                    }
                 }
             }
 
             @media only screen and (min-width: $screen-lg) {
                 @for $i from 1 through 4 {
                     &.lg-#{$i} {
-                        width: #{$i * 25 + "%"};
+                        width: calc(#{(25 * $i) + "%"} - 0.75rem);
                     }
                 }
             }
         }
     }
-}
-
-.section {
-    padding-top: 1rem;
-    min-height: 20rem;
 }
 
 .text-center {

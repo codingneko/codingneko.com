@@ -30,7 +30,8 @@ export class ProjectService {
                                         ... on Repository {
                                             name,
                                             description,
-                                            url
+                                            url,
+                                            homepageUrl
                                     }
                                 }
                             }

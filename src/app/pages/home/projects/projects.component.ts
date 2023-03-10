@@ -19,7 +19,27 @@ export class ProjectsComponent implements OnInit {
     private loadProjects() {
         this.projectService.getProjects().subscribe((projects) => {
             this.projects = projects;
-            console.log(projects);
+            this.addCustomProjectInformation();
+        });
+    }
+
+    private addCustomProjectInformation() {
+        this.projects.forEach((project) => {
+            project.customProjectInformation = {
+                image: 'assets/project-images/no-image.png',
+            };
+
+            if (project.name == 'NuTracker') {
+                project.customProjectInformation = {
+                    image: 'assets/project-images/nutracker.png',
+                };
+            }
+
+            if (project.name == 'memeageboard') {
+                project.customProjectInformation = {
+                    image: 'assets/project-images/memeageboard.png',
+                };
+            }
         });
     }
 }

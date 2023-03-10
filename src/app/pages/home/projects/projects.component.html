@@ -1,17 +1,35 @@
 <div id="projects" class="bg-brown txt-green section">
     <div class="container">
         <h2>Projects</h2>
-        <div class="project-container row">
+        <div class="project-container gap-1 row">
             <a
-                class="project cell lg-1"
+                class="project cell lg-1 md-2 sm-4"
                 *ngFor="let project of projects"
                 href="{{ project.url }}"
             >
-                <div class="name">
-                    {{ project.name }}
-                </div>
-                <div class="description">
-                    {{ project.description }}
+                <div class="card full-size">
+                    <img
+                        *ngIf="
+                            project.customProjectInformation !== undefined &&
+                            project.customProjectInformation.image != undefined
+                        "
+                        src="{{ project.customProjectInformation.image }}"
+                    />
+                    <div class="card-header">
+                        {{ project.name }}
+                    </div>
+                    <div class="card-content">
+                        <div class="description">
+                            {{ project.description }}
+                        </div>
+                        <a
+                            href="{{ project.homepageUrl }}"
+                            class="website"
+                            *ngIf="project.homepageUrl"
+                        >
+                            Click here to visit the website
+                        </a>
+                    </div>
                 </div>
             </a>
         </div>
