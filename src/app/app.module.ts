@@ -9,7 +9,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/home/projects/projects.component';
 import { ServicesComponent } from './pages/home/services/services.component';
 import { GalleryComponent } from './pages/home/gallery/gallery.component';
-import { ContactComponent } from './pages/home/contact/contact.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +18,6 @@ import { ContactComponent } from './pages/home/contact/contact.component';
         ProjectsComponent,
         ServicesComponent,
         GalleryComponent,
-        ContactComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule],
     providers: [],
