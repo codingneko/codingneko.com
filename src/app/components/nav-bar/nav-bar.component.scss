@@ -1,0 +1,36 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    ul {
+        list-style: none;
+        justify-content: flex-start;
+        display: flex;
+        padding-inline-start: 40px;
+        padding-inline-end: 40px;
+        font-family: "Budal Dolan", "Courier New", Courier, monospace;
+        font-size: 1.5rem;
+    }
+}
+
+.nav .left-nav {
+    justify-content: flex-start;
+
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+}
+
+.nav .right-nav {
+    justify-content: flex-end;
+
+    @media only screen and (max-width: 600px) {
+        padding: 0px;
+        width: 100%;
+    }
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 0rem 1rem;
+}

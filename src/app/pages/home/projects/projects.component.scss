@@ -1,0 +1,13 @@
+.project {
+    align-self: stretch;
+
+    .website {
+        padding: 0.5rem;
+        background-color: var(--sky-blue);
+        border-radius: 0.5rem;
+        display: block;
+        width: fit-content;
+        margin: auto;
+        margin-top: 1rem;
+    }
+}

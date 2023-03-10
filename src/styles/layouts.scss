@@ -1,0 +1,92 @@
+$screen-lg: 1000px;
+$screen-md: 600px;
+$screen-sm: 20px;
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.container {
+    .row {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        &.center {
+            justify-content: center;
+        }
+
+        &.right {
+            justify-content: flex-end;
+        }
+
+        &.gap-1 {
+            gap: 1rem;
+        }
+
+        .cell {
+            @media only screen and (min-width: $screen-sm) {
+                @for $i from 1 through 4 {
+                    &.sm-#{$i} {
+                        width: calc(#{(25 * $i) + "%"} - 0.75rem);
+                    }
+                }
+            }
+
+            @media only screen and (min-width: $screen-md) {
+                @for $i from 1 through 4 {
+                    &.md-#{$i} {
+                        width: calc(#{(25 * $i) + "%"} - 0.75rem);
+                    }
+                }
+            }
+
+            @media only screen and (min-width: $screen-lg) {
+                @for $i from 1 through 4 {
+                    &.lg-#{$i} {
+                        width: calc(#{(25 * $i) + "%"} - 0.75rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+@for $i from 1 through 3 {
+    .mt-#{$i} {
+        margin-top: #{$i}rem;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: #{$i}rem;
+    }
+
+    .ml-#{$i} {
+        margin-left: #{$i}rem;
+    }
+
+    .mr-#{$i} {
+        margin-right: #{$i}rem;
+    }
+
+    .pt-#{$i} {
+        padding-top: #{$i}rem;
+    }
+
+    .pb-#{$i} {
+        padding-bottom: #{$i}rem;
+    }
+
+    .pl-#{$i} {
+        padding-left: #{$i}rem;
+    }
+
+    .pr-#{$i} {
+        padding-right: #{$i}rem;
+    }
+}

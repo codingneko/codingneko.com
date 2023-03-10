@@ -1,0 +1,15 @@
+<div id="gallery" class="section">
+    <div class="container">
+        <h2>Gallery</h2>
+
+        <div class="gallery-container">
+            <a
+                [href]="image.url"
+                class="img-container"
+                *ngFor="let image of images"
+            >
+                <img [src]="image.url" alt="" />
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Budal Dolan";
+    src: url(../assets/fonts/BudalDolan.ttf);
+}
+
+@font-face {
+    font-family: "Styles";
+    src: url(../assets/fonts/StylesRegular-o7aa.ttf);
+}
+
+.little-one {
+    font-family: "Budal Dolan", "Courier New", Courier, monospace;
+}
+
+.little {
+    font-family: "Little", "Courier New", Courier, monospace;
+}
+
+.font-lg {
+    font-size: 4rem;
+}
+
+.font-md {
+    font-size: 2rem;
+}
+
+.font-sm {
+    font-size: 0.7rem;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.light {
+    font-weight: 100;
+}
+
+.normal {
+    font-weight: 400;
+}

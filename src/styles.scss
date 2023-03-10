@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./styles/colours.scss";
+@import "./styles/fonts.scss";
+@import "./styles/layouts.scss";
+@import "./styles/card.scss";
+
+body,
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Styles", "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+    background-color: var(--sky-blue);
+    background-size: 25%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-gray);
+}
+
+h1 {
+    font-family: "Budal Dolan";
+    font-weight: 200;
+    font-size: 8rem;
+    margin: 0rem;
+}
+
+h2 {
+    font-family: "Budal Dolan";
+    font-weight: 200;
+    font-size: 4rem;
+    margin: 0rem;
+}
+
+.section {
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    min-height: 10rem;
+}
