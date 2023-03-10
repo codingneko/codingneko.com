@@ -9,9 +9,9 @@
         border: solid 2px var(--dark-blue);
 
         img {
-            max-width: 10rem;
+            width: 10rem;
             height: 8rem;
-            object-fit: contain;
+            object-fit: cover;
         }
     }
 }
