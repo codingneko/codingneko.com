@@ -25,7 +25,7 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
-            - run: cp environments/environments.example.ts environments/environments.ts
+            - run: cp src/environments/environments.example.ts src/environments/environments.ts
             - run: npm i
             - run: npm i -g @angular/cli
             - run: npm run build --if-present
