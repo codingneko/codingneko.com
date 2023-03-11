@@ -15,7 +15,6 @@ export class GalleryComponent implements OnInit {
     ngOnInit(): void {
         this.galleryService.getImages('9byeky1ban').subscribe((images) => {
             if (images !== undefined) this.images = images;
-            console.log(this.images);
         });
     }
 }
