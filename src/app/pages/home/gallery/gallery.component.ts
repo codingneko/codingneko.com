@@ -15,17 +15,14 @@ export class GalleryComponent implements OnInit {
 
     ngOnInit(): void {
         this.galleryService.getImages('9byeky1ban').subscribe((images) => {
-            if (images !== undefined) {
-                images.forEach((img) => {
-                    this.images.push(img);
-                });
-
-                this.images.sort((a, b) =>
-                    Number((Math.random() * 10 - 5).toFixed())
-                );
-            }
-
-            console.log(this.images.length);
+            if (images !== undefined) this.images = images;
+            this.images.sort((a, b) => {
+                if (a.createdAt > b.createdAt) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            });
         });
     }
 

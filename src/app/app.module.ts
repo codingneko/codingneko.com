@@ -11,6 +11,7 @@ import { ServicesComponent } from './pages/home/services/services.component';
 import { GalleryComponent } from './pages/home/gallery/gallery.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PaginatorModule } from 'primeng/paginator';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
     declarations: [
@@ -27,6 +28,7 @@ import { PaginatorModule } from 'primeng/paginator';
         AppRoutingModule,
         HttpClientModule,
         PaginatorModule,
+        TooltipModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
