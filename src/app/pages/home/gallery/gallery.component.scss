@@ -1,17 +1,32 @@
 .gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
 
-    .img-container {
-        max-height: 8rem;
-        background-color: var(--sky-blue);
-        border: solid 2px var(--dark-blue);
-
+    .image-container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        a {
+            cursor: zoom-in;
+            &:active {
+                display: block;
+                width: 18rem;
+                height: 12rem;
+                img {
+                    width: 30rem;
+                    height: auto;
+                    position: absolute;
+                    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    transform: translateX(-25%) translateY(-25%);
+                }
+            }
+        }
         img {
-            width: 10rem;
-            height: 8rem;
+            width: 18rem;
+            height: 12rem;
             object-fit: cover;
+            background-color: black;
         }
     }
 }

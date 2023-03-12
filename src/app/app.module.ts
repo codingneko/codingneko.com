@@ -10,6 +10,7 @@ import { ProjectsComponent } from './pages/home/projects/projects.component';
 import { ServicesComponent } from './pages/home/services/services.component';
 import { GalleryComponent } from './pages/home/gallery/gallery.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,12 @@ import { FooterComponent } from './components/footer/footer.component';
         GalleryComponent,
         FooterComponent,
     ],
-    imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        PaginatorModule,
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })
