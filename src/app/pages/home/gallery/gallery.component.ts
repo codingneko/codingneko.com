@@ -9,12 +9,25 @@ import { MisskeyFile } from 'src/app/services/interfaces/misskey-gallery.interfa
 })
 export class GalleryComponent implements OnInit {
     images: MisskeyFile[] = [];
+    startAt: number = 0;
 
     constructor(private galleryService: GalleryService) {}
 
     ngOnInit(): void {
         this.galleryService.getImages('9byeky1ban').subscribe((images) => {
             if (images !== undefined) this.images = images;
+            this.images.sort((a, b) => {
+                if (a.createdAt > b.createdAt) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            });
         });
+    }
+
+    onPageChange(event: any): void {
+        //this is utter garbage but PrimeNG has forced my hand
+        this.startAt = event.first;
     }
 }
