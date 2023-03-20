@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GalleryService } from 'src/app/services/gallery.service';
+import { MisskeyService } from 'src/app/services/misskey.service';
 import { MisskeyFile } from 'src/app/services/interfaces/misskey-gallery.interface';
 
 @Component({
@@ -11,19 +11,21 @@ export class GalleryComponent implements OnInit {
     images: MisskeyFile[] = [];
     startAt: number = 0;
 
-    constructor(private galleryService: GalleryService) {}
+    constructor(private misskeyService: MisskeyService) {}
 
     ngOnInit(): void {
-        this.galleryService.getImages('9byeky1ban').subscribe((images) => {
-            if (images !== undefined) this.images = images;
-            this.images.sort((a, b) => {
-                if (a.createdAt > b.createdAt) {
-                    return -1;
-                } else {
-                    return 1;
-                }
+        this.misskeyService
+            .getFilesFromFolder('9ckyxy1vrk')
+            .subscribe((images) => {
+                if (images !== undefined) this.images = images;
+                this.images.sort((a, b) => {
+                    if (a.createdAt > b.createdAt) {
+                        return -1;
+                    } else {
+                        return 1;
+                    }
+                });
             });
-        });
     }
 
     onPageChange(event: any): void {
