@@ -11,10 +11,12 @@ import {
 @Injectable({
     providedIn: 'root',
 })
-export class GalleryService {
+export class MisskeyService {
     constructor(private http: HttpClient) {}
 
-    getImages(galleryId: string): Observable<MisskeyFile[] | undefined> {
+    getImagesFromGallery(
+        galleryId: string
+    ): Observable<MisskeyFile[] | undefined> {
         return this.http
             .post<MisskeyGallery[]>(
                 'https://misskey.codingneko.com/api/gallery/posts',
@@ -27,5 +29,17 @@ export class GalleryService {
                     (mg) => mg.find((gallery) => gallery.id == galleryId)?.files
                 )
             );
+    }
+
+    getFilesFromFolder(
+        folderId: string
+    ): Observable<MisskeyFile[] | undefined> {
+        return this.http.post<MisskeyFile[]>(
+            'https://misskey.codingneko.com/api/drive/files',
+            {
+                i: environment.misskeyAuthToken,
+                folderId: folderId,
+            }
+        );
     }
 }
