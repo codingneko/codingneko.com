@@ -39,6 +39,7 @@ export class MisskeyService {
             {
                 i: environment.misskeyAuthToken,
                 folderId: folderId,
+                limit: 100,
             }
         );
     }
