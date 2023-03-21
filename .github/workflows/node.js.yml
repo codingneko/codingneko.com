@@ -10,7 +10,6 @@ on:
         branches: ["master"]
 
 jobs:
-    runs-on: codingneko.com
     build:
         runs-on: ubuntu-latest
 
@@ -29,4 +28,14 @@ jobs:
             - run: cp src/environments/environments.example.ts src/environments/environments.ts
             - run: npm i
             - run: npm i -g @angular/cli
+            - run: npm run build --if-present
+    deploy:
+        runs-on: codingneko.com
+
+        steps:
+            - run: cd /var/www/codingneko
+            - run: git pull
+            - run: cp src/environments/environments.example.ts src/environments/environments.ts
+            - run: |
+                  echo "export const environment = { githubAuthToken: '${{ secrets.API_KEY_GITHUB }}', misskeyAuthToken: '${{ secrets.API_KEY_MISSKEY }}', };" >> src/environments/environment.ts
             - run: npm run build --if-present
