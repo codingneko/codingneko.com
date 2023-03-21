@@ -23,19 +23,29 @@ jobs:
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
               with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: "npm"
-            - run: cp src/environments/environments.example.ts src/environments/environments.ts
-            - run: npm i
-            - run: npm i -g @angular/cli
-            - run: npm run build --if-present
-    deploy:
-        runs-on: codingneko.com
-
-        steps:
-            - run: cd /var/www/codingneko
-            - run: git pull
-            - run: cp src/environments/environments.example.ts src/environments/environments.ts
+                node-version: ${{ matrix.node-version }}
+                cache: "npm"
+            - name: Create environments
+                run: cp src/environments/environments.example.ts src/environments/environments.ts
             - run: |
-                  echo "export const environment = { githubAuthToken: '${{ secrets.API_KEY_GITHUB }}', misskeyAuthToken: '${{ secrets.API_KEY_MISSKEY }}', };" >> src/environments/environment.ts
-            - run: npm run build --if-present
+                echo "export const environment = { githubAuthToken: '${{ secrets.API_KEY_GITHUB }}', misskeyAuthToken: '${{ secrets.API_KEY_MISSKEY }}', };" >> src/environments/environment.ts
+            - name: Install
+                run: npm i
+                run: npm i -g @angular/cli
+            - name: Build
+                run: npm run build --if-present
+            - name: Deploy
+            run: |
+                cd dist/
+                tar -czvf ../../app.tar.gz ./
+                cd ../..
+                sudo sshpass -p ${{ secrets.SSH_PASSWORD }} \
+                scp -v -o StrictHostKeyChecking=no -r app.tar.gz \
+                ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/codingneko/
+            - name: Uncompress new Files
+            run: |
+                sudo sshpass -p ${{ secrets.SSH_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+                'cd /var/www/codingneko/ && \
+                tar -xzvf app.tar.gz && \
+                rm app.tar.gz'
+
