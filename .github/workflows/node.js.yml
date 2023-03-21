@@ -10,6 +10,7 @@ on:
         branches: ["master"]
 
 jobs:
+    runs-on: codingneko.com
     build:
         runs-on: ubuntu-latest
 
