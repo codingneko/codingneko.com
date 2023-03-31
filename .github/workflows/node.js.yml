@@ -29,9 +29,3 @@ jobs:
             - run: npm i
             - run: npm i -g @angular/cli
             - run: npm run build --if-present
-            - run: |
-                  sudo sshpass -p ${{ secrets.SSH_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-                  'cd ~/codingneko.com && \
-                  git pull && \
-                  npm i && \
-                  npm run build --if-present'
