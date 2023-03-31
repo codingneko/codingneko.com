@@ -40,5 +40,5 @@ jobs:
             - run: |
                   sudo sshpass -p ${{ secrets.SSH_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
                   'cd /var/www/codingneko/ && \
-                  tar -xzvf app.tar.gz && \
+                  tar --overwrite -xzvf app.tar.gz && \
                   rm app.tar.gz'
