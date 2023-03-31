@@ -32,5 +32,7 @@ jobs:
             - run: |
                   sudo sshpass -p ${{ secrets.SSH_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
                   'cd /var/www/codingneko.com/ && \
+                  git stash && \
                   git pull && \
+                  git stash pop && \
                   npm run build --if-present'
