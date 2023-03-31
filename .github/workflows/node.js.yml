@@ -31,9 +31,7 @@ jobs:
             - run: npm run build --if-present
             - run: |
                   sudo sshpass -p ${{ secrets.SSH_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-                  'cd ~ && \
-                  git clone https://github.com/codingneko/codingneko.com && \
-                  cd codingneko.com && \
+                  'cd ~/codingneko.com && \
                   git stash && \
                   git pull && \
                   git stash pop && \
