@@ -33,6 +33,5 @@ jobs:
                   sudo sshpass -p ${{ secrets.SSH_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
                   'cd ~/codingneko.com && \
                   git pull && \
-                  nvm use 18.15.0 && \
                   npm i && \
                   npm run build --if-present'
