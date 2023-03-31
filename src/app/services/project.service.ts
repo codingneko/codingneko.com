@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, tap } from 'rxjs';
-import { environment } from 'src/environments/environments';
+import { constants } from 'src/environments/constants';
 import { GithubResponse } from './interfaces/GithubResponse.interface';
 import { Project } from './interfaces/project.interface';
 
@@ -15,12 +15,12 @@ export class ProjectService {
         let headers: HttpHeaders = new HttpHeaders();
         headers = headers.set(
             'Authorization',
-            'Bearer ' + environment.githubAuthToken
+            'Bearer ' + constants.githubAuthToken
         );
 
         return this.http
             .post<GithubResponse>(
-                'https://api.github.com/graphql',
+                constants.githubApiUrl + '/graphql',
                 JSON.stringify({
                     query: `
                     {

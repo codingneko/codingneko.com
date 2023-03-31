@@ -1,1 +1,15 @@
-<div class="container footer">CodingNeko {{ date.getFullYear() }}</div>
+<div class="container footer">
+    <div class="left-footer">CodingNeko {{ date.getFullYear() }}</div>
+    <div class="center-footer">
+        <a
+            class="pi pi-arrow-left"
+            href="https://fediring.net/previous?host={{ hostname }}"
+        ></a>
+        <a href="https://fediring.net/">Fediring</a>
+        <a
+            class="pi pi-arrow-right"
+            href="https://fediring.net/next?host={{ hostname }}"
+        ></a>
+    </div>
+    <div class="right-footer"></div>
+</div>

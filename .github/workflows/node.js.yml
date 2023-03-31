@@ -26,11 +26,10 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
             - run: cp src/environments/environments.example.ts src/environments/environments.ts
-            - run: |
-                  echo "export const environment = { githubAuthToken: '${{ secrets.API_KEY_GITHUB }}', misskeyAuthToken: '${{ secrets.API_KEY_MISSKEY }}', };" >> src/environments/environment.ts
             - run: npm i
             - run: npm i -g @angular/cli
             - run: npm run build --if-present
+            - run: rm src/environments/environments.example.ts src/environments/environments.ts
             - run: |
                   cd dist/
                   tar -czvf ../../app.tar.gz ./

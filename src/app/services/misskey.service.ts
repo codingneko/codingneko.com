@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environments';
+import { constants } from 'src/environments/constants';
 import { map, Observable } from 'rxjs';
 
 import {
@@ -19,9 +19,9 @@ export class MisskeyService {
     ): Observable<MisskeyFile[] | undefined> {
         return this.http
             .post<MisskeyGallery[]>(
-                'https://misskey.codingneko.com/api/gallery/posts',
+                constants.misskeyApiUrl + '/gallery/posts',
                 {
-                    i: environment.misskeyAuthToken,
+                    i: constants.misskeyAuthToken,
                 }
             )
             .pipe(
@@ -35,9 +35,9 @@ export class MisskeyService {
         folderId: string
     ): Observable<MisskeyFile[] | undefined> {
         return this.http.post<MisskeyFile[]>(
-            'https://misskey.codingneko.com/api/drive/files',
+            constants.misskeyApiUrl + '/drive/files',
             {
-                i: environment.misskeyAuthToken,
+                i: constants.misskeyAuthToken,
                 folderId: folderId,
                 limit: 100,
             }

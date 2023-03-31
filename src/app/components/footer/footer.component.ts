@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { constants } from 'src/environments/constants';
 
 @Component({
     selector: 'app-footer',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
     date: Date = new Date();
+    hostname: string = constants.url;
 
     ngOnInit() {
         this.date.getFullYear();
