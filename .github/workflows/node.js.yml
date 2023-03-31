@@ -29,16 +29,8 @@ jobs:
             - run: npm i
             - run: npm i -g @angular/cli
             - run: npm run build --if-present
-            - run: rm src/constants.ts
-            - run: |
-                  cd dist/
-                  tar -czvf ../../app.tar.gz ./
-                  cd ../..
-                  sudo sshpass -p ${{ secrets.SSH_PASSWORD }} \
-                  scp -v -o StrictHostKeyChecking=no -r app.tar.gz \
-                  ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/codingneko/
             - run: |
                   sudo sshpass -p ${{ secrets.SSH_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-                  'cd /var/www/codingneko/ && \
-                  tar --overwrite -xzvf app.tar.gz && \
-                  rm app.tar.gz'
+                  'cd /var/www/codingneko.com/ && \
+                  git pull && \
+                  npm run build --if-present'
