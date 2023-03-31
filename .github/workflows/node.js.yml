@@ -35,5 +35,6 @@ jobs:
                   git stash && \
                   git pull && \
                   git stash pop && \
+                  nvm use 18.15.0
                   npm i
                   npm run build --if-present'
