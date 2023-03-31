@@ -1,4 +1,4 @@
-export const environment = {
+export const constants = {
     url: '',
     misskeyApiUrl: '',
     githubApiUrl: '',
