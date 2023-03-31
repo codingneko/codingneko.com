@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { constants } from 'src/environments/constants';
+import { constants } from 'src/constants';
 
 @Component({
     selector: 'app-footer',

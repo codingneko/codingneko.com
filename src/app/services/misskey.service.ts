@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { constants } from 'src/environments/constants';
+import { constants } from 'src/constants';
 import { map, Observable } from 'rxjs';
 
 import {

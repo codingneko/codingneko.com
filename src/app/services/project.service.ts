@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, tap } from 'rxjs';
-import { constants } from 'src/environments/constants';
+import { constants } from 'src/constants';
 import { GithubResponse } from './interfaces/GithubResponse.interface';
 import { Project } from './interfaces/project.interface';
 
