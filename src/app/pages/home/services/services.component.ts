@@ -45,6 +45,19 @@ export class ServicesComponent implements OnInit {
                 image: 'assets/service-images/matrix.jpg',
                 url: 'https://matrix.codingneko.com',
             },
+            {
+                name: 'Minecraft server',
+                description: `A dumb minecraft server to play with your friends (and me, can I be your friend? >~<) the IP is mc.codingneko.com`,
+                running: true,
+                image: `assets/service-images/minecraft.jpg`,
+            },
+            {
+                name: 'Agar.io server',
+                description: `A custom Agar.io server, yes, unironically xd`,
+                running: true,
+                image: `assets/service-images/agario.png`,
+                url: 'https://agar.codingneko.com',
+            },
         ];
     }
 
