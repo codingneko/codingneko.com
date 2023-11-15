@@ -6,6 +6,7 @@ import { map, Observable } from 'rxjs';
 import {
     MisskeyFile,
     MisskeyGallery,
+    MisskeyUser,
 } from './interfaces/misskey-gallery.interface';
 
 @Injectable({
@@ -31,6 +32,17 @@ export class MisskeyService {
             );
     }
 
+    getMyAvatar(): Observable<MisskeyUser[]> {
+        return this.http.post<MisskeyUser[]>(constants.misskeyApiUrl + '/users/search', {
+            i: constants.misskeyAuthToken,
+            query: 'cody',
+            offset: 0,
+            limit: 1,
+            origin: 'local',
+            detail: false,
+        }).pipe();
+    }
+
     getFilesFromFolder(
         folderId: string
     ): Observable<MisskeyFile[] | undefined> {
@@ -42,5 +54,22 @@ export class MisskeyService {
                 limit: 100,
             }
         );
+    }
+
+    getEmptyMisskeyUser(): MisskeyUser {
+        return {
+            id: '',
+            name: '',
+            username: '',
+            host: '',
+            avatarUrl: '',
+            avatarBlurhash: '',
+            isBot: false,
+            isCat: false,
+            onlineStatus: false,
+            description: '',
+            createdAt: new Date(),
+            emojis: '',
+        }
     }
 }

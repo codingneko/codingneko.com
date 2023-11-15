@@ -15,9 +15,9 @@ export class ServicesComponent implements OnInit {
     ngOnInit() {
         this.services = [
             {
-                name: 'Misskey Instance',
-                description: `A personal misskey instance meant to host myself on fedi,
-                            it's not really open to sign-ups, but I may allow a friend or two to use it if really needed`,
+                name: 'Sharkey Instance',
+                description: `A place for little catboys like myself to exist on the fediverse, I bought this domain and deployed a
+                            fediverse instance on it to hang out with friends in. It federates with most of the fediverse, so go follow me!`,
                 running: true,
                 image: 'assets/service-images/misskey.png',
                 url: 'https://misskey.codingneko.com',

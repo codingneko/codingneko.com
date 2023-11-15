@@ -14,12 +14,15 @@ export interface MisskeyUser {
     id: string;
     name: string;
     username: string;
-    host?: string;
+    host: string | null;
     avatarUrl: string;
     avatarBlurhash: string;
     isBot: boolean;
     isCat: boolean;
     onlineStatus: boolean;
+    description: string;
+    createdAt: Date;
+    emojis: Object;
 }
 
 export interface MisskeyFile {

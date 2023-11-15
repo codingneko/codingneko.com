@@ -1,0 +1,29 @@
+<div id="services" class="section">
+    <div class="container">
+        <h2>Services</h2>
+
+        <div class="service-container gap-1 row">
+            <a
+                [href]="social.link"
+                class="service cell lg-1 md-2 sm-4"
+                rel="me"
+                *ngFor="let social of socials"
+            >
+                <div class="card full-size">
+                    <img
+                        *ngIf="social.image != undefined"
+                        src="{{ social.image }}"
+                    />
+                    <div class="card-header">
+                        {{ social.website }}
+                    </div>
+                    <div class="card-content">
+                        <div class="description">
+                            {{ social.username }}
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

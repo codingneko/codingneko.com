@@ -12,6 +12,7 @@ import { GalleryComponent } from './pages/home/gallery/gallery.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PaginatorModule } from 'primeng/paginator';
 import { TooltipModule } from 'primeng/tooltip';
+import { SocialMediaComponent } from './pages/home/social-media/social-media.component';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { TooltipModule } from 'primeng/tooltip';
         ServicesComponent,
         GalleryComponent,
         FooterComponent,
+        SocialMediaComponent,
     ],
     imports: [
         BrowserModule,
