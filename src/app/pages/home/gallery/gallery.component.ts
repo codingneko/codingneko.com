@@ -15,7 +15,7 @@ export class GalleryComponent implements OnInit {
 
     ngOnInit(): void {
         this.misskeyService
-            .getFilesFromFolder('9ckyxy1vrk')
+            .getFilesFromFolder('9m42gjf2ig')
             .subscribe((images) => {
                 if (images !== undefined) this.images = images;
                 this.images.sort((a, b) => {
