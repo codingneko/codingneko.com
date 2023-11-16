@@ -27,12 +27,12 @@ export class SocialMediaComponent implements OnInit {
                 logo: 'assets/sm-logos/catboy-baby.png'
             },
             {
-                displayName: 'CodingNeko',
-                username: '@codingneko',
-                website: 'Twitter',
-                link: 'https://twitter.com/codingneko',
-                image: 'https://pbs.twimg.com/profile_images/1666454402465505285/Gb549q1h_400x400.png',
-                logo: 'assets/sm-logos/twitter.webp'
+                username: '@cody@owncast.codingneko.com',
+                website: 'Owncast',
+                link: 'https://owncast.codingneko.com/',
+                description: 'This is where I stream, come watch me, I\'m usually cooking or doing house choers, and ocasionally gaming or coding.',
+                logo: 'assets/sm-logos/owncast.png',
+                image: 'https://owncast.codingneko.com/logo',
             },
             {
                 username: 'CodingNeko',
@@ -58,7 +58,15 @@ export class SocialMediaComponent implements OnInit {
                 link: 'https://en.pronouns.page/@CodingNeko',
                 image: 'https://dclu0bpcdglik.cloudfront.net/images/01GW1MG6YBPKS8CSJX8XWPSRMT-avatar.png',
                 logo: 'assets/sm-logos/pronouns-page.png'
-            }
+            },
+            {
+                displayName: 'CodingNeko',
+                username: '@codingneko',
+                website: 'Twitter',
+                link: 'https://twitter.com/codingneko',
+                image: 'https://pbs.twimg.com/profile_images/1666454402465505285/Gb549q1h_400x400.png',
+                logo: 'assets/sm-logos/twitter.webp'
+            },
         ];
 
 
