@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MisskeyService } from 'src/app/services/misskey.service';
 import { MisskeyFile } from 'src/app/services/interfaces/misskey.interface';
+import { constants } from 'src/constants';
 
 @Component({
     selector: 'app-gallery',
@@ -15,7 +16,7 @@ export class GalleryComponent implements OnInit {
 
     ngOnInit(): void {
         this.misskeyService
-            .getFilesFromFolder('9m42gjf2ig')
+            .getFilesFromFolder(constants.misskeyFolderId)
             .subscribe((images) => {
                 if (images !== undefined) this.images = images;
                 this.images.sort((a, b) => {
