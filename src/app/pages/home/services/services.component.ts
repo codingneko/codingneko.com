@@ -20,7 +20,7 @@ export class ServicesComponent implements OnInit {
                             fediverse instance on it to hang out with friends in. It federates with most of the fediverse, so go follow me!`,
                 running: true,
                 image: 'assets/service-images/misskey.png',
-                url: 'https://misskey.codingneko.com',
+                url: 'https://catboy.baby',
             },
             {
                 name: 'TeamSpeak server',
