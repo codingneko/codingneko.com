@@ -83,7 +83,7 @@ export class SocialMediaComponent implements OnInit {
                             'My main fedi account on my own instance. Go follow me!! :nkoGun:',
                             emojis
                         );
-                        this.socials[1].description = this.misskeyService.doMisskeyEmojis(
+                        this.socials[5].description = this.misskeyService.doMisskeyEmojis(
                             'This account is kind of dead. Preferably don\'t contact me there, use fedi. :ameowree:',
                             emojis
                         );
