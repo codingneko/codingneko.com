@@ -1,26 +1,34 @@
 <div id="services" class="section">
     <div class="container">
-        <h2>Services</h2>
+        <h2>Social Media</h2>
 
         <div class="service-container gap-1 row">
             <a
                 [href]="social.link"
-                class="service cell lg-1 md-2 sm-4"
+                class="service cell lg-0 md-1 sm-2"
                 rel="me"
                 *ngFor="let social of socials"
             >
                 <div class="card full-size">
                     <img
                         *ngIf="social.image != undefined"
+                        alt="{{social.website}} avatar image"
                         src="{{ social.image }}"
                     />
+                    <div class="website-name">
+                        <img src="{{social.logo}}" alt="{{social.website}} logo" class="social-logo">
+                        {{social.website}}
+                    </div>
                     <div class="card-header">
-                        {{ social.website }}
+                        <div class="display-name" [innerHTML]="social.displayName ? social.displayName : social.username">
+
+                        </div>
+                        <div class="username" *ngIf="social.displayName">
+                            {{social.username}}
+                        </div>
                     </div>
                     <div class="card-content">
-                        <div class="description">
-                            {{ social.username }}
-                        </div>
+                        <div class="description" *ngIf="social.description" [innerHtml]="social.description"></div>
                     </div>
                 </div>
             </a>

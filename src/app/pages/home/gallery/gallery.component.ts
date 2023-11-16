@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MisskeyService } from 'src/app/services/misskey.service';
-import { MisskeyFile } from 'src/app/services/interfaces/misskey-gallery.interface';
+import { MisskeyFile } from 'src/app/services/interfaces/misskey.interface';
 
 @Component({
     selector: 'app-gallery',

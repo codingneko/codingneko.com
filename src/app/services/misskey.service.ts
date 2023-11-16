@@ -2,18 +2,20 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { constants } from 'src/constants';
 import { map, Observable } from 'rxjs';
-
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import {
+    MisskeyEmoji,
+    MisskeyEmojiResponse,
     MisskeyFile,
     MisskeyGallery,
     MisskeyUser,
-} from './interfaces/misskey-gallery.interface';
+} from './interfaces/misskey.interface';
 
 @Injectable({
     providedIn: 'root',
 })
 export class MisskeyService {
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
 
     getImagesFromGallery(
         galleryId: string
@@ -40,7 +42,15 @@ export class MisskeyService {
             limit: 1,
             origin: 'local',
             detail: false,
-        }).pipe();
+        });
+    }
+
+    getEmojis(): Observable<MisskeyEmoji[]> {
+        return this.http.post<MisskeyEmojiResponse>(constants.misskeyApiUrl + '/emojis', {
+            i: constants.misskeyAuthToken
+        }).pipe(
+            map(response => response.emojis)
+        );
     }
 
     getFilesFromFolder(
@@ -71,5 +81,25 @@ export class MisskeyService {
             createdAt: new Date(),
             emojis: '',
         }
+    }
+
+    doMisskeyEmojis(text: string, emojis: MisskeyEmoji[]): SafeHtml {
+
+        var result = text;
+        emojis.forEach(emoji => {
+            result = result.replace(`:${emoji.name}:`, `
+                <img
+                    src="${emoji.url}" class="mi-emoji"
+                    style="
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        background-color: transparent;
+                        transform: translateY(0.2rem);
+                    "
+                >
+            `);
+        });
+
+        return this.sanitizer.bypassSecurityTrustHtml(result);
     }
 }

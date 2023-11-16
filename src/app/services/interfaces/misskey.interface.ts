@@ -43,3 +43,14 @@ export interface MisskeyFile {
     userId: string;
     user: MisskeyUser;
 }
+
+export interface MisskeyEmoji {
+    aliases: string[];
+    name: string;
+    category: string;
+    url: string;
+}
+
+export interface MisskeyEmojiResponse {
+    emojis: MisskeyEmoji[];
+}
