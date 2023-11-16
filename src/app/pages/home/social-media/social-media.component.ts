@@ -28,6 +28,7 @@ export class SocialMediaComponent implements OnInit {
             },
             {
                 username: '@cody@owncast.codingneko.com',
+                displayName: 'Cody\'s gaming room',
                 website: 'Owncast',
                 link: 'https://owncast.codingneko.com/',
                 description: 'This is where I stream, come watch me, I\'m usually cooking or doing house choers, and ocasionally gaming or coding.',
