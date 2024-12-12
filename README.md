@@ -29,7 +29,7 @@ This section contains cards with projects I'm working on. It fetches information
 I have plans to have a similar thing to what I mentioned on the [Services](#services) section, so I can add projects I don't have on GitHub too, but those would be "manually" updated from the front-end.
 
 ## Social Feed
-This section is still TODO. The idea is to make it a combined timeline of all my social media profiles ([Twitter](https://twitter.com/codingneko) and [Misskey](https://misskey.codingneko.com/@cody)), showing my latest status updates from them.
+This section is still TODO. The idea is to make it a combined timeline of all my social media profiles ([Bsky](https://bsky.app/codingneko) and [Sharkey](https://catboy.baby/@cody)), showing my latest status updates from them.
 
 ## Administration
 This part of the site is only visible to the deployer (me, or maybe you, if you clone it), The idea is to have an easy way to update non-API based sections like the [Services](#services) section. 
