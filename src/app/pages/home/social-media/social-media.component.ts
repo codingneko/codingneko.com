@@ -57,7 +57,7 @@ export class SocialMediaComponent implements OnInit {
                 website: 'Pronouns.page',
                 description: 'This is just a neat website that has info about the pronouns and terms I like being addressed by.',
                 link: 'https://en.pronouns.page/@CodingNeko',
-                image: 'https://dclu0bpcdglik.cloudfront.net/images/01GW1MG6YBPKS8CSJX8XWPSRMT-avatar.png',
+                image: 'https://cdn.pronouns.page/images/01GW1MG6YBPKS8CSJX8XWPSRMT-avatar.png',
                 logo: 'assets/sm-logos/pronouns-page.png'
             },
             {
