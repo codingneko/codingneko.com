@@ -58,6 +58,10 @@ jobs:
 
       - name: Configure SSH
         run: |
+          if [ -z "${{ secrets.SERVER_PRIV_KEY }}" ]; then
+            echo "Missing required secret: SERVER_PRIV_KEY"
+            exit 1
+          fi
           mkdir -p ~/.ssh
           printf '%s' "${{ secrets.SERVER_PRIV_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
