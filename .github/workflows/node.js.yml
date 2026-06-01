@@ -41,6 +41,11 @@ jobs:
           printf '%s' "${{ secrets.SERVER_PRIV_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan codingneko.com >> ~/.ssh/known_hosts
+          
+      - name: Validate SSH key file
+        run: |
+          ls -l ~/.ssh/id_rsa
+          file ~/.ssh/id_rsa || true
       
       - name: Upload built code
         if: github.event_name == 'push'
