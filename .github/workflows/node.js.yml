@@ -32,10 +32,10 @@ jobs:
           EOF
           
       - name: Install dependencies and build
-        run: npm i && npm run build
+        run: npm ci && npm run build
 
       - name: Install OpenSSH
-        run: apt install openssh-client
+        run: sudo apt install openssh-client -y
         
       - name: Create private key
         run: mkdir ~/.ssh && echo ${{secrets.SERVER_PRIV_KEY}} >> ~/.ssh/id_rsa
