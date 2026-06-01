@@ -38,9 +38,7 @@ jobs:
         if: github.event_name == 'push'
         run: |
           mkdir -p ~/.ssh
-          cat << 'EOF' > ~/.ssh/id_rsa
-          ${{ secrets.SERVER_PRIV_KEY }}
-          EOF
+          printf '%s' "${{ secrets.SERVER_PRIV_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan codingneko.com >> ~/.ssh/known_hosts
       
