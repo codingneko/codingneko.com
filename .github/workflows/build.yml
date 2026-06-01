@@ -45,6 +45,7 @@ jobs:
           
   deploy:
     runs-on: ubuntu-latest
+    environment: CodingNeko server
     needs: build
     if: github.event_name == 'push'
 
