@@ -33,12 +33,16 @@ jobs:
           
       - name: Install dependencies and build
         run: npm i && npm run build
-
-      - name: Install OpenSSH
-        run: sudo apt install openssh-client -y
         
-      - name: Create private key
-        run: mkdir ~/.ssh && echo ${{secrets.SERVER_PRIV_KEY}} >> ~/.ssh/id_rsa
-        
-      - name: Upload built code to server
-        run: scp -r dist root@codingneko.com:/var/www/codingneko.com/
+      - name: Configure SSH
+        if: github.event_name == 'push'
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SERVER_PRIV_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan codingneko.com >> ~/.ssh/known_hosts
+      
+      - name: Upload built code
+        if: github.event_name == 'push'
+        run: |
+          scp -r dist root@codingneko.com:/var/www/codingneko.com/
