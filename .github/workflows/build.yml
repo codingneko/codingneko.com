@@ -45,7 +45,7 @@ jobs:
           
   deploy:
     runs-on: ubuntu-latest
-    environment: CodingNeko server
+    environment: "CodingNeko server"
     needs: build
     if: github.event_name == 'push'
 
@@ -65,4 +65,4 @@ jobs:
 
       - name: Deploy via SCP
         run: |
-          scp -r dist/* root@codingneko.com:/var/www/codingneko.com/
+          scp -r dist root@codingneko.com:/var/www/codingneko.com/
