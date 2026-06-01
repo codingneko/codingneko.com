@@ -30,10 +30,15 @@ jobs:
               misskeyFolderId: '${{ vars.MISSKEY_FOLDER_ID }}'
           };
           EOF
-      - name: install dependencies and build
+          
+      - name: Install dependencies and build
         run: npm i && npm run build
+
+      - name: Install OpenSSH
+        run: apt install openssh-client
+        
       - name: Create private key
-        run: |
-          echo ${{secrets.SERVER_PRIV_KEY}} >> ~/.ssh/id_rsa
+        run: mkdir ~/.ssh && echo ${{secrets.SERVER_PRIV_KEY}} >> ~/.ssh/id_rsa
+        
       - name: Upload built code to server
         run: scp -r dist root@codingneko.com:/var/www/codingneko.com/
