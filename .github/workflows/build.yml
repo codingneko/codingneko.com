@@ -25,7 +25,7 @@ jobs:
               url: 'https://codingneko.com',
               misskeyApiUrl: 'https://codingneko.com/api/emojis',
               githubApiUrl: 'https://api.github.com/graphql',
-              githubAuthToken: '${{ secrets.GITHUB_TOKEN }}',
+              githubAuthToken: '${{ secrets.GITHUB_VIEW_TOKEN }}',
               misskeyAuthToken: '${{ secrets.MISSKEY_TOKEN }}',
               misskeyFolderId: '${{ vars.MISSKEY_FOLDER_ID }}'
           };
