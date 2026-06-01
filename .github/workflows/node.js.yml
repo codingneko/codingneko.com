@@ -25,7 +25,21 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
-            - run: cp src/constants.example.ts src/constants.ts
-            - run: npm i
-            - run: npm i -g @angular/cli
-            - run: npm run build --if-present
+            - name: Create constants.ts
+              run: |
+                cat > src/constants.ts <<EOF
+                export const constants = {
+                    url: 'https://codingneko.com',
+                    misskeyApiUrl: 'https://codingneko.com/api/emojis',
+                    githubApiUrl: 'https://api.github.com/graphql',
+                    githubAuthToken: '${{secrets.GITHUB_TOKEN}}',
+                    misskeyAuthToken: '${{secrets.MISSKEY_TOKEN}}',
+                    misskeyFolderId: '${{vars.MISSKEY_FOLDER_ID}}'
+                };
+                EOF
+            - name: Install dependencies
+              run: npm i
+            - name: Install angular/cli globally
+              run: npm i -g @@angular/cli
+            - name: Run the build
+              run: npm run build --if-present
