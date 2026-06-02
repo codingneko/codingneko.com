@@ -23,7 +23,7 @@ jobs:
           cat > src/constants.ts <<EOF
           export const constants = {
               url: 'https://codingneko.com',
-              misskeyApiUrl: 'https://codingneko.com/api/emojis',
+              misskeyApiUrl: 'https://catboy.baby/api',
               githubApiUrl: 'https://api.github.com/graphql',
               githubAuthToken: '${{ secrets.GITHUB_VIEW_TOKEN }}',
               misskeyAuthToken: '${{ secrets.MISSKEY_TOKEN }}',
