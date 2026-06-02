@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    environment: "CodingNeko server"
     steps:
       - uses: actions/checkout@v4
 
